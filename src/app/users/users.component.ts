@@ -37,6 +37,6 @@ export class UsersComponent {
   }
 
   getRamaDetails(){
-    
+    this.router.navigate(['/users',2,'Rama'])
   }
 }
