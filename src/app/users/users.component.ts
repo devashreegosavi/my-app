@@ -29,6 +29,17 @@ export class UsersComponent {
         name : data['name']
       }
     })
+
+    console.log(this.route.snapshot.queryParams);
+    console.log(this.route.snapshot.fragment);
+
+    this.route.queryParams.subscribe(data => {
+      console.log(data);
+    })
+
+    this.route.fragment.subscribe(data => {
+      console.log(data);
+    })
   }
   onCategoryclick(){
     //this.router.navigateByUrl('/categories');
@@ -37,6 +48,11 @@ export class UsersComponent {
   }
 
   getRamaDetails(){
-    this.router.navigate(['/users',2,'Rama'])
+    this.router.navigate(['/users',2,'Rama'],
+      {
+        queryParams : { page : 2, search : 'leela'},
+        fragment : 'loading'
+      }
+    )
   }
 }
