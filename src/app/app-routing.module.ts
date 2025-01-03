@@ -9,8 +9,15 @@ const routes: Routes = [
     { path : '', component : HomeComponent},
     { path : 'home', component : HomeComponent},
     { path : 'users', component : UsersComponent},
-    { path : 'users/:id/:name', component : UsersComponent},
-    { path : 'categories', component : CategoriesComponent}
+    //{ path : 'users/:id/:name', component : UsersComponent},
+    { 
+      path : 'categories', 
+      component : CategoriesComponent,
+      children : [{
+        path : 'users/:id/:name', component : UsersComponent
+      }]
+
+    }
 ];
 
 @NgModule({
