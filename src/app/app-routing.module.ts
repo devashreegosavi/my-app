@@ -23,6 +23,7 @@ const routes: Routes = [
     { 
       path : 'categories', 
       component : CategoriesComponent,
+      canActivateChild : [AuthGuardService],
       children : [{
         path : 'users/:id/:name', component : UsersComponent
         //path : ':id/:name/edit', component : EditUserComponent
