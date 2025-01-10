@@ -57,6 +57,6 @@ export class UsersComponent {
   }
 
   onUserEdit(){
-    
+    this.router.navigate(['/categories']);
   }
 }

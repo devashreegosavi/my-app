@@ -9,6 +9,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthService } from './services/guards/auth.service';
+import { DeactivateGuardService } from './services/guards/deactivate-guard.service';
 //import { AuthGuardService } from './services/guards/auth-guard.service';
 
 @NgModule({
@@ -26,6 +27,7 @@ import { AuthService } from './services/guards/auth.service';
   ],
   providers: [
     AuthService,
+    DeactivateGuardService,
     //AuthGuardService,
     provideClientHydration(withEventReplay())
   ],

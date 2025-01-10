@@ -6,6 +6,7 @@ import { CategoriesComponent } from './categories/categories.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthGuardService } from './services/guards/auth-guard.service';
+import { DeactivateGuardService } from './services/guards/deactivate-guard.service';
 
 const routes: Routes = [
     //{ path : '', redirectTo : '/home', pathMatch : 'full' },
@@ -16,7 +17,7 @@ const routes: Routes = [
       component : UsersComponent,
       canActivate : [AuthGuardService]
     },
-    { path : 'edit', component : EditUserComponent},
+    { path : 'edit', component : EditUserComponent, canDeactivate : [DeactivateGuardService]},
     { path : 'not-found', component : PageNotFoundComponent},
     
     //{ path : 'users/:id/:name', component : UsersComponent},
