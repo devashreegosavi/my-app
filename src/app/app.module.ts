@@ -10,6 +10,8 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AuthService } from './services/guards/auth.service';
 import { DeactivateGuardService } from './services/guards/deactivate-guard.service';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 //import { AuthGuardService } from './services/guards/auth-guard.service';
 
 @NgModule({
@@ -19,7 +21,9 @@ import { DeactivateGuardService } from './services/guards/deactivate-guard.servi
     UsersComponent,
     CategoriesComponent,
     EditUserComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
